@@ -8,9 +8,33 @@
     <title>WeatherApp</title>
 </head>
 <body>
-    <div>
-        
-    </div>
     
+    <div class="container mx-auto flex flex-col items-center justify-center py-24">
+
+      <h1 class="text-5xl capitalize font-semibold py-8">ninjaWeather</h1>
+     <div>
+      <form class="change-location py-8 text-center">
+        <label for="city" class="">Enter a location for weather information</label>
+        <input type="text" name="city" class="block w-full p-2.5 text-gray-900 border border-gray-300 rounded bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500">
+      </form>
+
+      <div class="card shadow-xl rounded-lg">
+          <img src="https://via.placeholder.com/400x300" alt="" class="time ">
+        <div>
+          <!--icon-->
+        </div>
+        <div class="text-center p-4">
+          <h5 class="text-4xl font-semibold mb-3">City name</h5>
+          <div class="text-lg font-semibold text-gray-300">WEATHER CONDITION</div>
+          <div class="my-3">
+            <span class="capitalize text-5xl mb-6 ">temp</span>
+            <span class="text-5xl font-thin mb-6">&deg;C</span>
+          </div>
+        </div>
+    </div>
+  </div>
+    
+    <script src="scripts/forecast.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
