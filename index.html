@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/dist/output.css" rel="stylesheet">
-    <title>WeatherApp</title>
-</head>
-<body>
-    
-    <div class="container mx-auto flex flex-col items-center justify-center py-14 px-4 md:px-0 ">
 
-      <h1 class="text-5xl capitalize font-semibold py-8">yeezyWeather</h1>
-     <div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <title>WeatherApp</title>
+</head>
+
+<body>
+
+  <div class="container mx-auto flex flex-col items-center justify-center py-14 px-4 md:px-0 ">
+
+    <h1 class="text-5xl capitalize font-semibold py-8">yeezyWeather</h1>
+    <div>
       <form class="change-location py-8 text-center">
         <label for="city" class="">Enter a location for weather information</label>
-        <input type="text" name="city" class="block w-full p-2.5 text-gray-900 border border-gray-300 rounded bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500">
+        <input type="text" name="city"
+          class="block w-full p-2.5 text-gray-900 border border-gray-300 rounded bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500">
       </form>
 
       <div class="card shadow-xl shadow-black rounded-lg hidden">
-          <img src="https://via.placeholder.com/400x300" alt="" class="time ">
+        <img src="https://via.placeholder.com/400x300" alt="" class="time ">
         <div>
           <!--icon-->
         </div>
@@ -31,10 +34,11 @@
             <span class="text-5xl uppercase  font-thin mb-6">&deg;C</span>
           </div>
         </div>
+      </div>
     </div>
   </div>
-    </div>
-    <script src="scripts/forecast.js"></script>
-    <script src="scripts/app.js"></script>
+  <script src="scripts/forecast.js"></script>
+  <script src="scripts/app.js"></script>
 </body>
+
 </html>
