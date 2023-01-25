@@ -1,3 +1,5 @@
+const searchBar = document.querySelector('.search-bar');
+
 let weather = {
     apiKey: "14bc5975bb148f4421746193265d7dcc",
     fetchWeather: function (city) {
@@ -35,20 +37,32 @@ let weather = {
             "url('https://source.unsplash.com/1600x900/?" + name + "')";
     },
     search: function () {
-        this.fetchWeather(document.querySelector(".search-bar").value);
+        this.fetchWeather(searchBar.value);
     },
+    reset: function () {
+        searchBar.value = ""; // clear the search bar input
+        document.querySelector(".city").innerText = ""; // clear the displayed city name
+        document.querySelector(".icon").src = ""; // clear the displayed weather icon
+        document.querySelector(".description").innerText = ""; // clear the displayed weather description
+        document.querySelector(".temp").innerText = ""; // clear the displayed temperature
+        document.querySelector(".humidity").innerText = ""; // clear
+
+        document.querySelector(".wind").innerText = ""; // clear the displayed wind speed
+},
 };
 
 document.querySelector(".search button").addEventListener("click", function () {
-    weather.search();
+weather.search();
+weather.reset();
 });
 
 document
-    .querySelector(".search-bar")
-    .addEventListener("keyup", function (event) {
-        if (event.key == "Enter") {
-            weather.search();
-        }
-    });
+.querySelector(".search-bar")
+.addEventListener("keyup", function (event) {
+if (event.code === "Enter") {
+weather.search();
+weather.reset();
+}
+});
 
 weather.fetchWeather("Nigeria");
