@@ -43,8 +43,8 @@ let weather = {
         localStorage.setItem("city", searchBar.value);
         //get item
         let storedCity = localStorage.getItem("city");
-            // Save the last searched city to local storage
-          localStorage.setItem("lastSearchedCity", searchBar.value);
+        // Save the last searched city to local storage
+        localStorage.setItem("lastSearchedCity", searchBar.value);
     },
     reset: function () {
         searchBar.value = ""; // clear the search bar input
@@ -75,7 +75,6 @@ weather.reset();
 // Retrieve the last searched city from local storage on page load
 let lastSearchedCity = localStorage.getItem("lastSearchedCity");
 if (lastSearchedCity) {
-    searchBar.value = lastSearchedCity;
     weather.fetchWeather(lastSearchedCity);
 } else {
     weather.fetchWeather("Nigeria");
